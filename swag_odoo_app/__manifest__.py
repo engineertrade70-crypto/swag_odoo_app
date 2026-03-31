@@ -1,6 +1,6 @@
 {
     "name": "SWAG Product Comparison Dashboard",
-    "version": "17.0.1.0",
+    "version": "19.0.1.0",
     "summary": "Multi Odoo Product Search + Filters + PDF Parsing + Excel Export",
     "description": """
         SWAG Product Comparison Dashboard
