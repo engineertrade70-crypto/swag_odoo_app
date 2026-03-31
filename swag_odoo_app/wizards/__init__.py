@@ -1,1 +1,1 @@
-from . import pdf_parser_wizard
+# Wizard models are defined in models/pdf_parser.py
