@@ -1,1 +1,3 @@
-from . import swag_config\nfrom . import product_search\nfrom . import pdf_parser
+from . import swag_config
+from . import product_search
+from . import pdf_parser
