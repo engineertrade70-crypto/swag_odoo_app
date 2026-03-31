@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: swag-odoo
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: standard
+    region: frankfurt
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 8069
+      - key: DB_HOST
+        fromDatabase:
+          name: swag-odoo-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: swag-odoo-db
+          property: port
+      - key: DB_USER
+        fromDatabase:
+          name: swag-odoo-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: swag-odoo-db
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: swag-odoo-db
+          property: database
+    healthCheckPath: /web/health
+
+databases:
+  - name: swag-odoo-db
+    plan: free
+    databaseName: odoo
+    user: odoo
