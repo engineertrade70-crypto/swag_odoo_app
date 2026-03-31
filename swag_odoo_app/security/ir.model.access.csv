@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_swag_config,swag.odoo.config,model_swag_odoo_config,base.group_user,1,1,1,1
+access_product_search,swag.product.search,model_swag_product_search,base.group_user,1,1,1,1
+access_pdf_parser,swag.pdf.parser,model_swag_pdf_parser,base.group_user,1,1,1,1

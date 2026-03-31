@@ -1,0 +1,22 @@
+
+<odoo>
+    <!-- Main Dashboard Action -->
+    <record id="action_swag_dashboard" model="ir.actions.client">
+        <field name="name">SWAG Dashboard</field>
+        <field name="tag">swag_dashboard</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_swag_root" name="SWAG Dashboard" sequence="5"/>
+    <menuitem id="menu_swag_dash" name="Dashboard" parent="menu_swag_root" 
+              action="action_swag_dashboard" sequence="10"/>
+
+    <!-- Config Menu -->
+    <record id="action_swag_config" model="ir.actions.act_window">
+        <field name="name">Multi Odoo Config</field>
+        <field name="res_model">swag.odoo.config</field>
+        <field name="view_mode">form</field>
+    </record>
+    <menuitem id="menu_swag_config" name="Config" parent="menu_swag_root" 
+              action="action_swag_config"/>
+</odoo>
