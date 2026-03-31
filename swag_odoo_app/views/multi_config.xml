@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Form View: SWAG Odoo Config -->
+        <record id="view_swag_odoo_config_form" model="ir.ui.view">
+            <field name="name">swag.odoo.config.form</field>
+            <field name="model">swag.odoo.config</field>
+            <field name="arch" type="xml">
+                <form string="SWAG Multi Odoo Configuration">
+                    <sheet>
+                        <group string="General">
+                            <field name="name"/>
+                        </group>
+                        <group string="SWAG System">
+                            <field name="swag_url"/>
+                            <field name="swag_db"/>
+                            <field name="swag_user"/>
+                            <field name="swag_password" password="True"/>
+                        </group>
+                        <group string="La Rouche System">
+                            <field name="larouche_url"/>
+                            <field name="larouche_db"/>
+                            <field name="larouche_user"/>
+                            <field name="larouche_password" password="True"/>
+                        </group>
+                        <group string="Different Clothes System">
+                            <field name="diff_clothes_url"/>
+                            <field name="diff_clothes_db"/>
+                            <field name="diff_clothes_user"/>
+                            <field name="diff_clothes_password" password="True"/>
+                        </group>
+                        <group string="Fashion Limits System">
+                            <field name="fashion_limits_url"/>
+                            <field name="fashion_limits_db"/>
+                            <field name="fashion_limits_user"/>
+                            <field name="fashion_limits_password" password="True"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_swag_odoo_config_tree" model="ir.ui.view">
+            <field name="name">swag.odoo.config.tree</field>
+            <field name="model">swag.odoo.config</field>
+            <field name="arch" type="xml">
+                <tree string="SWAG Configurations">
+                    <field name="name"/>
+                    <field name="swag_url"/>
+                    <field name="larouche_url"/>
+                    <field name="diff_clothes_url"/>
+                    <field name="fashion_limits_url"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_swag_odoo_config" model="ir.actions.act_window">
+            <field name="name">SWAG Configurations</field>
+            <field name="res_model">swag.odoo.config</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="menu_swag_config"
+            name="Configurations"
+            parent="menu_swag_root"
+            action="action_swag_odoo_config"
+            sequence="20"/>
+
+    </data>
+</odoo>
