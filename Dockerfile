@@ -3,7 +3,7 @@ FROM odoo:19.0
 USER root
 
 # Install pypdf for PDF parsing
-RUN pip3 install pypdf openpyxl
+RUN pip3 install pypdf openpyxl --break-system-packages
 
 # Copy custom module
 COPY ./swag_odoo_app /mnt/extra-addons/swag_odoo_app
